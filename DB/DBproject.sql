@@ -1,24 +1,30 @@
---군인테이블
-Create table soldler(
-Mno varchar2(11) primary key,
-Name varcher2(20) not null,
-Squad varcher2(10),
-Vday number(3),
-Rank varchar(9),
-Edate date
-);
+-- < 테이블 생성하기 >
+--	군인테이블
+create sequence soldier _seq
+    start with 1
+    increment by 1
+    maxvalue 99999999;
 
---총기 테이블
-Create table gun(
-Gunno number(6) primary key,
-Type varchar2(20) not null,
-Model varchar2(10) notnull
-);
+--	휴가테이블
+create sequence vacation_seq
+    start with 1
+    increment by 1
+    maxvalue 99999999;
 
---총기 수불대장 테이블
-Create table gunlog(
-Lno number(10) primary key,
-Ldate date not null,
-Rdate date,
-Gno number(6) 
-);
+--	근무테이블
+create sequence duty_seq
+    start with 1
+    increment by 1
+    maxvalue 99999999;
+
+--	총기수불대장테이블
+create sequence gunlog _seq
+    start with 1
+    increment by 1
+    maxvalue 99999999;
+
+--	근무관리테이블
+create sequence drecord_seq
+    start with 1
+    increment by 1
+    maxvalue 99999999;
